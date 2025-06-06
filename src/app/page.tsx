@@ -1,103 +1,183 @@
 import Image from "next/image";
+import Head from "next/head";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <Head>
+        <title>My Air Filter Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* If you have a global CSS (e.g. styles/globals.css) that already imports Tailwind,
+            you can skip the next line. Otherwise, you can directly pull in the Tailwind CDN here: */}
+        {/* <script src="https://cdn.tailwindcss.com"></script> */}
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* NAVIGATION BAR */}
+      <header className="bg-sky-400">
+        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+          {/* Logo / Site Title */}
+          <div className="text-white font-semibold text-xl">
+            My Air Filter Project
+          </div>
+
+          {/* Navigation Links */}
+          <ul className="flex space-x-6">
+            <li>
+              <a href="#home" className="text-white hover:text-gray-100">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="text-white hover:text-gray-100">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#products" className="text-white hover:text-gray-100">
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="#team" className="text-white hover:text-gray-100">
+                Team
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      {/* HERO / LANDING SECTION (Home) */}
+      <main id="home" className="container mx-auto px-4 py-20">
+        <div className="bg-sky-50 rounded-lg shadow-md p-12 text-center">
+          {/* Blank space for custom text */}
+          <h1 className="text-4xl font-bold text-sky-600 mb-6">
+            Welcome to My Low-Cost Air Filter & Monitor Project
+          </h1>
+          <p className="text-gray-700 leading-relaxed">
+            {/* 
+              Replace this paragraph with your own custom copy.
+              e.g. “I’m a student at JIS working on a DIY air filter...” 
+            */}
+            ________________________________________________________________________
+            ________________________________________________________________________
+          </p>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* ABOUT US SECTION */}
+      <section id="about" className="container mx-auto px-4 py-16">
+        <h2 className="text-3xl font-semibold text-sky-600 mb-4">About Us</h2>
+        <p className="text-gray-700">
+          {/* Add your “About Us” content here */}
+          I’m a student at [Your School] working on an affordable air filtration
+          system and quality monitors. This project aims to…
+        </p>
+      </section>
+
+      {/* PRODUCTS SECTION */}
+      <section id="products" className="bg-sky-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-sky-600 mb-4">Products</h2>
+          <p className="text-gray-700 mb-8">
+            {/* Describe your filters and sensors here */}
+            Explore the low-cost air filter, its components, performance specs,
+            and the air quality monitor you built…
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="bg-white rounded-lg shadow p-6">
+              <h3 className="text-xl font-semibold text-sky-600 mb-2">
+                Low-Cost Air Filter
+              </h3>
+              <p className="text-gray-600 mb-4">
+                A brief description of the filter’s design, materials, and how
+                it works.
+              </p>
+              <a
+                href="#"
+                className="inline-block px-4 py-2 bg-sky-400 text-white rounded hover:bg-sky-500"
+              >
+                Learn More
+              </a>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-lg shadow p-6">
+              <h3 className="text-xl font-semibold text-sky-600 mb-2">
+                Air Quality Monitor
+              </h3>
+              <p className="text-gray-600 mb-4">
+                A quick summary of your monitoring device, what sensors it uses
+                (e.g., PM2.5, CO₂), and how to read data.
+              </p>
+              <a
+                href="#"
+                className="inline-block px-4 py-2 bg-sky-400 text-white rounded hover:bg-sky-500"
+              >
+                Learn More
+              </a>
+            </div>
+
+            {/* Card 3 (optional) */}
+            <div className="bg-white rounded-lg shadow p-6">
+              <h3 className="text-xl font-semibold text-sky-600 mb-2">
+                Assembly Guide
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Step-by-step instructions on how to build your filter and
+                monitor at home.
+              </p>
+              <a
+                href="#"
+                className="inline-block px-4 py-2 bg-sky-400 text-white rounded hover:bg-sky-500"
+              >
+                View Guide
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TEAM SECTION */}
+      <section id="team" className="container mx-auto px-4 py-16">
+        <h2 className="text-3xl font-semibold text-sky-600 mb-4">Team</h2>
+        <p className="text-gray-700 mb-8">
+          {/* Introduce yourself and any collaborators here */}
+          Meet the students and mentors behind this project…
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {/* Member 1 */}
+          <div className="bg-white rounded-lg shadow p-6 text-center">
+            <div className="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4">
+              {/* Replace with: 
+                  <img src="/your-photo.jpg" alt="Your Name" className="w-full h-full object-cover rounded-full" /> 
+              */}
+            </div>
+            <h3 className="text-xl font-medium text-gray-800">Your Name</h3>
+            <p className="text-gray-600">Role / Position</p>
+          </div>
+
+          {/* Member 2 */}
+          <div className="bg-white rounded-lg shadow p-6 text-center">
+            <div className="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4">
+              {/* Replace with actual <img> */}
+            </div>
+            <h3 className="text-xl font-medium text-gray-800">
+              Collaborator Name
+            </h3>
+            <p className="text-gray-600">Role / Position</p>
+          </div>
+
+          {/* Add more team members as needed */}
+        </div>
+      </section>
+
+      {/* FOOTER (optional) */}
+      <footer className="bg-sky-400">
+        <div className="container mx-auto px-4 py-6 text-center text-white">
+          &copy; 2025 My Air Filter Project. All rights reserved.
+        </div>
       </footer>
-    </div>
+    </>
   );
 }

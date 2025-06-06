@@ -48,4 +48,3 @@ out/
 # VSCode settings, logs, environment files
 .vscode/
 npm-debug.log*
-.env.local
