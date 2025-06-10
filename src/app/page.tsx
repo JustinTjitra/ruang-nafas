@@ -105,7 +105,7 @@ export default function HomePage() {
                 About Us
               </h3>
               <p className="text-base font-roboto text-stone-500 mb-7">
-                We're a student group focused on advocating for clean air in
+                We are a student group focused on advocating for clean air in
                 Indonesia. Through our own skills in engineering and design, we
                 created and donated to various schools and communities our own
                 low-cost designs for filters and monitors focused on targetting
